@@ -3,3 +3,11 @@
 ################################################################################
 
 /XFormsCV/.vs/XFormsCV/v16
+/.vs
+/XFormsCV/XFormsCV/XFormsCV.iOS/obj
+/XFormsCV/XFormsCV/XFormsCV.Android/bin/Debug
+/XFormsCV/XFormsCV/XFormsCV.Android/obj
+/XFormsCV/XFormsCV/XFormsCV.Android/XFormsCV.Android.csproj.user
+/XFormsCV/XFormsCV/XFormsCV/bin/Debug/netstandard2.0
+/XFormsCV/XFormsCV/XFormsCV/obj
+*.user
