@@ -3,9 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:XFormsCV.ViewModels"
+             xmlns:rsx="clr-namespace:XFormsCV.Resources"
+             xmlns:ext="clr-namespace:XFormsCV.Extensions"
              mc:Ignorable="d"
              x:Class="XFormsCV.Views.AboutPage"
-             xmlns:vm="clr-namespace:XFormsCV.ViewModels"
              Title="{Binding Title}">
     
     <ContentPage.BindingContext>
@@ -21,6 +23,15 @@
     </ContentPage.Resources>
 
     <Grid>
+        <StackLayout>
+
+            <Label TextColor="Black" Text="{Binding [Bonjour], Source={x:Static rsx:ResourceLoader.Instance}}"/>
+
+            <Button Text="Change" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </Grid>
+    
+    <!--<Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -76,6 +87,6 @@
                         TextColor="White" />
             </StackLayout>
         </ScrollView>
-    </Grid>
+    </Grid>-->
     
 </ContentPage>

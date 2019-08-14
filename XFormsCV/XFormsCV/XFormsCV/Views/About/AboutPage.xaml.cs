@@ -1,7 +1,9 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Globalization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XFormsCV.Resources;
 
 namespace XFormsCV.Views
 {
@@ -13,6 +15,14 @@ namespace XFormsCV.Views
 		public AboutPage()
 		{
 			InitializeComponent();
+			
+		}
+
+		private void Button_Clicked(object sender, EventArgs e)
+		{
+			//CultureInfo englishUSCulture = new CultureInfo("en-US");
+			//CultureInfo.DefaultThreadCurrentCulture = englishUSCulture;
+			ResourceLoader.Instance.SetCultureInfo(new CultureInfo("en-US"));
 		}
 	}
 }

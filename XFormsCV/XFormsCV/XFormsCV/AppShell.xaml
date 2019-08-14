@@ -3,8 +3,9 @@
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:d="http://xamarin.com/schemas/2014/forms/design"
        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-       mc:Ignorable="d"
        xmlns:local="clr-namespace:XFormsCV.Views"
+       xmlns:rsx="clr-namespace:XFormsCV.Resources"
+       mc:Ignorable="d"
        Title="XFormsCV"
        x:Class="XFormsCV.AppShell">
 
@@ -31,12 +32,15 @@
 
     <!-- Your Pages -->
     <TabBar>
-        <Tab Title="Browse" Icon="tab_feed.png">
-            <ShellContent ContentTemplate="{DataTemplate local:ItemsPage}" />
+        <Tab Title="{Binding [Bonjour], Source={x:Static rsx:ResourceLoader.Instance}}" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}" />
         </Tab>
-        <Tab Title="About" Icon="tab_about.png">
+        <Tab Title="{Binding [Bonjour], Source={x:Static rsx:ResourceLoader.Instance}}" Icon="tab_about.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ExperiencePage}" />
+        </Tab>
+        <!--<Tab Title="{Binding [Shell.Menu.About], Source={x:Static rsx:ResourceLoader.Instance}}" Icon="tab_about.png">
             <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
-        </Tab>
+        </Tab>-->
     </TabBar>
 
     <!-- Optional Templates 

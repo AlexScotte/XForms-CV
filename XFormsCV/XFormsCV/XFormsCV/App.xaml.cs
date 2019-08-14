@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XFormsCV.Services;
@@ -14,6 +15,7 @@ namespace XFormsCV
 			InitializeComponent();
 
 			DependencyService.Register<MockDataStore>();
+			
 			MainPage = new AppShell();
 		}
 
